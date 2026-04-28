@@ -1,1 +1,24 @@
 Hello World
+<script>
+document.addEventListener('keydown', function (e) {
+    // Block F12
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+
+    // Block Ctrl+Shift+I (Inspect)
+    if (e.ctrlKey && e.shiftKey && e.key === "I") {
+        e.preventDefault();
+    }
+
+    // Block Ctrl+Shift+J (Console)
+    if (e.ctrlKey && e.shiftKey && e.key === "J") {
+        e.preventDefault();
+    }
+
+    // Block Ctrl+U (View Source)
+    if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+    }
+});
+</script>
